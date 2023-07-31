@@ -51,15 +51,23 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
                         <Ellipse Width="100" Height="100" Name="grey" Fill="Gray"/>
-                        <Ellipse Width="80" Height="80" Name="orgn" Fill="Orange"/>
+                        <Ellipse Width="75" Height="75" Name="orgn" Fill="Orange"/>
                         <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <EventTrigger RoutedEvent="Button.Click">
                             <BeginStoryboard>
                                 <Storyboard>
-                                    <DoubleAnimation Storyboard.TargetName="orgn" Storyboard.TargetProperty="(Ellipse.Width)" To="100" Duration="0:0:1"/>
-                                    <DoubleAnimation Storyboard.TargetName="orgn" Storyboard.TargetProperty="(Ellipse.Height)" To="100" Duration="0:0:1"/>
+                                    <DoubleAnimation Storyboard.TargetName="orgn" Storyboard.TargetProperty="(Ellipse.Width)" To="90" Duration="0:0:0.2"/>
+                                    <DoubleAnimation Storyboard.TargetName="orgn" Storyboard.TargetProperty="(Ellipse.Height)" To="90" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="orgn" Storyboard.TargetProperty="(Ellipse.Width)" To="75" Duration="0:0:1"/>
+                                    <DoubleAnimation Storyboard.TargetName="orgn" Storyboard.TargetProperty="(Ellipse.Height)" To="75" Duration="0:0:1"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
@@ -67,7 +75,6 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-
     </Grid>
     
 </Window>
