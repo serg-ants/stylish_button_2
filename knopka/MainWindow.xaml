@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
-        <Grid.RowDefinitions>
+        <!--<Grid.RowDefinitions>
             <RowDefinition  Height="Auto"/>
             <RowDefinition  Height="Auto"/>
             <RowDefinition  Height="Auto"/>
@@ -19,29 +19,7 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition  Width="Auto"/>
             <ColumnDefinition  Width="Auto"/>
-        </Grid.ColumnDefinitions>
-
-
-        <Button Grid.Row="0" Grid.Column="0" Width="100" Height="100" Content="Click Me" x:Name="Button1" Margin="564,40,129.333,280.667">
-            <Button.Triggers>
-                <EventTrigger RoutedEvent="Button.Click">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Width" To="200"   Duration="0:0:0:1" ></DoubleAnimation>
-                            <DoubleAnimation Storyboard.TargetProperty="Height" To="200"   Duration="0:0:0:1" ></DoubleAnimation>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-                <EventTrigger RoutedEvent="MouseLeave">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Height" To="100"   Duration="0:0:0:1" ></DoubleAnimation>
-                            <DoubleAnimation Storyboard.TargetProperty="Width" To="100" Duration="0:0:0:1" ></DoubleAnimation>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-            </Button.Triggers>
-        </Button>
+        </Grid.ColumnDefinitions>-->
 
 
 
@@ -55,7 +33,7 @@
                         <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                     <ControlTemplate.Triggers>
-                        <EventTrigger RoutedEvent="Button.Click">
+                        <EventTrigger RoutedEvent="MouseEnter">
                             <BeginStoryboard>
                                 <Storyboard>
                                     <DoubleAnimation Storyboard.TargetName="orgn" Storyboard.TargetProperty="(Ellipse.Width)" To="90" Duration="0:0:0.2"/>
